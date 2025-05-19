@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BNPL(先買後付)問卷調查</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Serif TC', serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    h1 {
+      font-size: 2rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+
+    .btn-group {
+      margin-top: 2rem;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      margin-right: 1rem;
+      border: 1px solid #666;
+      border-radius: 6px;
+      background-color: white;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    button:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      button {
+        display: block;
+        margin-bottom: 1rem;
+        width: 100%;
+      }
+    }
+
+    .intro {
+      margin-top: 2rem;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .logo {
+      width: 280px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="intro">
+     <img class="logo" src="logo@2x.png" alt="My Logo">
+    <h1>BNPL(先買後付)問卷調查</h1>
+    <p>親愛的先生／小姐 您好：</p>
+    <p>感謝您撥冗參與本研究。</p>
+    <p>📌 本問卷採隨機分派設計，您將被分配至一個特定情境，請根據該情境內容作答。<br>
+       📌 問卷為匿名填寫，填寫時間約為 5～8 分鐘。<br>
+       📌 完成問卷後還有抽獎小彩蛋等著您唷！</p>
+    <p> 📢【抽獎活動】問卷截止後將從有效的線上問卷中抽出參與者</p>
+    <p>贈送 :火烤兩用鍋Ｘ1份、星巴克禮卷Ｘ3份、便利商店禮卷Ｘ6份</p>
+    <p>您的意見對本研究極具參考價值，誠摯感謝您的協助！</p>
+    <p>敬祝<br>事事順心、平安健康</p>
+  </div>
+  <p>請問您是否曾「<strong>聽過或實際使用過</strong>」先買後付（BNPL）服務？(如銀角零卡、AFTEE、無卡分期）</p>
+
+  <div class="btn-group">
+    <button onclick="goToUsed()">我曾聽過或使用過</button>
+    <button onclick="goToExperiment()">我沒聽過也沒使用過</button>
+  </div>
+
+  <script>
+    function goToUsed() {
+      window.location.href = "https://www.surveycake.com/s/W0neZ";
+    }
+
+    function goToExperiment() {
+      const experimentLinks = [
+        "https://www.surveycake.com/s/K6o8o",
+        "https://www.surveycake.com/s/ZWp2q",
+        "https://www.surveycake.com/s/O6mZN",
+        "https://www.surveycake.com/s/d3x93",
+        "https://www.surveycake.com/s/G63Az"
+      ];
+      const randomIndex = Math.floor(Math.random() * experimentLinks.length);
+      window.location.href = experimentLinks[randomIndex];
+    }
+  </script>
+</body>
+</html>
